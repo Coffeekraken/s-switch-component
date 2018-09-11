@@ -27,37 +27,40 @@
     .#{s-component()} {
       width: 2em;
       height: 1em;
-      border-radius: .5em;
+      border-radius: 0.5em;
       display: inline-block;
       position: relative;
       cursor: pointer;
 
-      &:after {
+      &::before {
         content: '';
         display: block;
         position: absolute;
-        width: .8em;
-        height: .8em;
-        top: .1em;
-        left: .1em;
-        border-radius: .4em;
+        width: 0.8em;
+        height: 0.8em;
+        top: 0.1em;
+        left: 0.1em;
+        border-radius: 0.4em;
         background-color: white;
         transform: translateX(0) translateY(0);
+
         @include s-transition(fast);
       }
 
-      &:active:after {
+      &:active::before {
         width: 1em;
       }
     }
+
     [is="#{s-component()}"]:checked + .#{s-component()} {
-        &:after {
-          left: 100%;
-          transform: translateX(calc(-100% - .1em)) translateY(0);
-        }
+      &::before {
+        left: 100%;
+        transform: translateX(-110%) translateY(0);
+      }
     }
+
     [is="#{s-component()}"]:disabled + .#{s-component()} {
-      opacity: .5;
+      opacity: 0.5;
       pointer-events: none;
     }
   }
@@ -71,9 +74,9 @@
   $colors: default primary secondary
 ) {
   @include s-component('s-switch') {
-
     .#{s-component()} {
       background-color: #e2e2e2;
+
       @include s-transition(fast);
     }
 

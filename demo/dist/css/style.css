@@ -4213,7 +4213,7 @@ body {
   cursor: pointer;
 }
 
-.s-switch:after {
+.s-switch:before {
   content: '';
   display: block;
   position: absolute;
@@ -4228,13 +4228,13 @@ body {
   outline-color: black;
 }
 
-.s-switch:active:after {
+.s-switch:active:before {
   width: 1em;
 }
 
-[is="s-switch"]:checked + .s-switch:after {
+[is="s-switch"]:checked + .s-switch:before {
   left: 100%;
-  transform: translateX(calc(-100% - .1em)) translateY(0);
+  transform: translateX(-110%) translateY(0);
 }
 
 [is="s-switch"]:disabled + .s-switch {

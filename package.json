@@ -1,12 +1,12 @@
 {
-  "name": "coffeekraken-s-component-name-component",
+  "name": "coffeekraken-s-switch-component",
   "version": "1.0.0",
-  "description": "component-description",
+  "description": "Provide a nice and simple switch element",
   "main": "dist/index.js",
   "homepage": "http://coffeekraken.io",
   "repository": {
     "type": "git",
-    "url": "https://github.com/coffeekraken/s-{component-name}-component"
+    "url": "https://github.com/coffeekraken/s-switch-component"
   },
   "watch": {
     "doc:js": {
@@ -45,6 +45,9 @@
     "lint"
   ],
   "keywords": [
+    "switch",
+    "input",
+    "checkbox",
     "webcomponent",
     "component",
     "html",
@@ -88,7 +91,7 @@
     "git-changelog": "^1.1.2",
     "http-server": "^0.11.1",
     "jest": "^23.3.0",
-    "node-sass": "^4.0.0",
+    "node-sass": "^4.9.3",
     "pre-commit": "^1.2.2",
     "standard": "^11.0.1",
     "stylelint": "^9.3.0",

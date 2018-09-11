@@ -29,7 +29,7 @@ module.exports = {
         </p>
         <label class="block m-b">
           Default<br>
-          <input type="checkbox" is="s-switch" checked class="s-medium" disabled />
+          <input type="checkbox" is="s-switch" class="s-medium" disabled />
         </label>
         <label class="block m-b">
           Primary<br>
@@ -37,23 +37,23 @@ module.exports = {
         </label>
         <label class="block m-b">
           Secondary<br>
-          <input type="checkbox" is="s-switch" color="secondary" checked class="s-medium" />
+          <input type="checkbox" is="s-switch" color="secondary" checked class="s-big" />
         </label>
         <label class="block m-b">
           Success<br>
-          <input type="checkbox" is="s-switch" color="success" checked class="s-medium" />
+          <input type="checkbox" is="s-switch" color="success" checked class="s-big" />
         </label>
         <label class="block m-b">
           Error<br>
-          <input type="checkbox" is="s-switch" color="error" checked class="s-medium" />
+          <input type="checkbox" is="s-switch" color="error" checked class="s-big" />
         </label>
         <label class="block m-b">
           Warning<br>
-          <input type="checkbox" is="s-switch" color="warning" checked class="s-medium" />
+          <input type="checkbox" is="s-switch" color="warning" checked class="s-bigger" />
         </label>
         <label class="block m-b">
           Info<br>
-          <input type="checkbox" is="s-switch" color="info" checked class="s-medium" />
+          <input type="checkbox" is="s-switch" color="info" checked class="s-bigger" />
         </label>
       `
     },

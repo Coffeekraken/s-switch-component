@@ -28,6 +28,14 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+/**
+ * Provide a nice and simple switch element
+ *
+ * @example    html
+ * <input type="checkbox" is="s-switch" />
+ *
+ * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
+ */
 var Component = function (_native) {
   _inherits(Component, _native);
 
@@ -117,7 +125,26 @@ var Component = function (_native) {
      * @protected
      */
     get: function get() {
-      return {};
+      return {
+        /**
+         * Specify a registered and renderer color to use
+         * @prop
+         * @type    {String}
+         */
+        color: 'default'
+      };
+    }
+
+    /**
+     * Physical props
+     * @definition    SWebComponent.physicalProps
+     * @protected
+     */
+
+  }, {
+    key: 'physicalProps',
+    get: function get() {
+      return ['color'];
     }
   }]);
 

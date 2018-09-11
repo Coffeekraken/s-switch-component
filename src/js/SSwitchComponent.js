@@ -2,6 +2,14 @@ import __native from 'coffeekraken-sugar/js/core/sNativeWebComponent'
 import __insertAfter from 'coffeekraken-sugar/js/dom/insertAfter'
 import __uniqid from 'coffeekraken-sugar/js/utils/uniqid'
 
+/**
+ * Provide a nice and simple switch element
+ *
+ * @example    html
+ * <input type="checkbox" is="s-switch" />
+ *
+ * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
+ */
 export default class Component extends __native(window.HTMLInputElement) {
   /**
    * Default props
@@ -10,7 +18,22 @@ export default class Component extends __native(window.HTMLInputElement) {
    */
   static get defaultProps () {
     return {
+      /**
+       * Specify a registered and renderer color to use
+       * @prop
+       * @type    {String}
+       */
+      color: 'default'
     }
+  }
+
+  /**
+   * Physical props
+   * @definition    SWebComponent.physicalProps
+   * @protected
+   */
+  static get physicalProps () {
+    return ['color']
   }
 
   /**

@@ -1,37 +1,37 @@
-# Coffeekraken s-{component-name}-component <img src=".resources/coffeekraken-logo.jpg" height="25px" />
+# Coffeekraken s-switch-component <img src=".resources/coffeekraken-logo.jpg" height="25px" />
 
 <p>
-	<!-- <a href="https://travis-ci.org/{repository-path}">
-		<img src="https://img.shields.io/travis/{repository-path}.svg?style=flat-square" />
+	<!-- <a href="https://travis-ci.org/coffeekraken/s-switch-component">
+		<img src="https://img.shields.io/travis/coffeekraken/s-switch-component.svg?style=flat-square" />
 	</a> -->
-	<a href="https://www.npmjs.com/package/{npm-package-name}">
-		<img src="https://img.shields.io/npm/v/{npm-package-name}.svg?style=flat-square" />
+	<a href="https://www.npmjs.com/package/coffeekraken-s-switch-component">
+		<img src="https://img.shields.io/npm/v/coffeekraken-s-switch-component.svg?style=flat-square" />
 	</a>
-	<a href="https://github.com/{repository-path}/blob/master/LICENSE.txt">
-		<img src="https://img.shields.io/npm/l/{npm-package-name}.svg?style=flat-square" />
+	<a href="https://github.com/coffeekraken/s-switch-component/blob/master/LICENSE.txt">
+		<img src="https://img.shields.io/npm/l/coffeekraken-s-switch-component.svg?style=flat-square" />
 	</a>
-	<!-- <a href="https://github.com/{repository-path}">
-		<img src="https://img.shields.io/npm/dt/{npm-package-name}.svg?style=flat-square" />
+	<!-- <a href="https://github.com/coffeekraken/s-switch-component">
+		<img src="https://img.shields.io/npm/dt/coffeekraken-s-switch-component.svg?style=flat-square" />
 	</a>
-	<a href="https://github.com/{repository-path}">
-		<img src="https://img.shields.io/github/forks/{repository-path}.svg?style=social&label=Fork&style=flat-square" />
+	<a href="https://github.com/coffeekraken/s-switch-component">
+		<img src="https://img.shields.io/github/forks/coffeekraken/s-switch-component.svg?style=social&label=Fork&style=flat-square" />
 	</a>
-	<a href="https://github.com/{repository-path}">
-		<img src="https://img.shields.io/github/stars/{repository-path}.svg?style=social&label=Star&style=flat-square" />
+	<a href="https://github.com/coffeekraken/s-switch-component">
+		<img src="https://img.shields.io/github/stars/coffeekraken/s-switch-component.svg?style=social&label=Star&style=flat-square" />
 	</a> -->
-	<a href="https://twitter.com/{twitter-username}">
-		<img src="https://img.shields.io/twitter/url/http/{twitter-username}.svg?style=social&style=flat-square" />
+	<a href="https://twitter.com/coffeekrakenio">
+		<img src="https://img.shields.io/twitter/url/http/coffeekrakenio.svg?style=social&style=flat-square" />
 	</a>
 	<a href="http://coffeekraken.io">
 		<img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=flat-square&label=coffeekraken.io&colorB=f2bc2b&style=flat-square" />
 	</a>
 </p>
 
-{component-description}
+Provide a nice and simple switch element
 
 ## Table of content
 
-1. **[Demo](http://components.coffeekraken.io/app/s-{component-name}-component)**
+1. **[Demo](http://components.coffeekraken.io/app/s-switch-component)**
 2. [Install](#readme-install)
 3. [Get Started](#readme-get-started)
 4. [Javascript API](doc/js)
@@ -47,7 +47,7 @@
 ## Install
 
 ```
-npm install coffeekraken-s-{component-name}-component --save
+npm install coffeekraken-s-switch-component --save
 ```
 
 <a name="readme-get-started"></a>
@@ -56,13 +56,22 @@ npm install coffeekraken-s-{component-name}-component --save
 First, import the component into your javascript file like so:
 
 ```js
-import ComponentName from 'coffeekraken-s-{component-name}-component'
+import SSwitchComponent from 'coffeekraken-s-switch-component'
+```
+
+Generate the classes like so:
+
+```scss
+@import 'node_modules/coffeekraken-s-switch-component/index';
+@include s-switch-classes(
+  $colors: default primary secondary
+);
 ```
 
 Then simply use it inside your html like so:
 
 ```html
-<s-{component-name}></s-{component-name}>
+<input type="checkbox" is="s-switch" color="primary" />
 ```
 
 <a id="readme-browsers-support"></a>
