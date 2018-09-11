@@ -1,0 +1,92 @@
+/**
+ * @name    s-switch
+ * Provide a nice and simple switch element
+ *
+ * @example   html
+ * <input type="checkbox" is="s-switch" />
+ *
+ * @author    Olivier Bossel <olivier.bossel@gmail.com>
+ */
+
+/**
+ * Print out the bare and style component css
+ * @param 	{List<Color>} 		[$color=default primary secondary] 		The colors to generate
+ */
+@mixin s-switch-classes(
+  $colors: default primary secondary
+) {
+  @include s-switch-classes-bare();
+  @include s-switch-classes-style($colors);
+}
+
+/**
+ * Print out the bare component css
+ */
+@mixin s-switch-classes-bare() {
+  @include s-component('s-switch') {
+    .#{s-component()} {
+      width: 2em;
+      height: 1em;
+      border-radius: .5em;
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: .8em;
+        height: .8em;
+        top: .1em;
+        left: .1em;
+        border-radius: .4em;
+        background-color: white;
+        transform: translateX(0) translateY(0);
+        @include s-transition(fast);
+      }
+
+      &:active:after {
+        width: 1em;
+      }
+    }
+    [is="#{s-component()}"]:checked + .#{s-component()} {
+        &:after {
+          left: 100%;
+          transform: translateX(calc(-100% - .1em)) translateY(0);
+        }
+    }
+    [is="#{s-component()}"]:disabled + .#{s-component()} {
+      opacity: .5;
+      pointer-events: none;
+    }
+  }
+}
+
+/**
+ * Print out the style component css
+ * @param 	{List<Color>} 		[$color=default primary secondary] 		The colors to generate
+ */
+@mixin s-switch-classes-style(
+  $colors: default primary secondary
+) {
+  @include s-component('s-switch') {
+
+    .#{s-component()} {
+      background-color: #e2e2e2;
+      @include s-transition(fast);
+    }
+
+    @each $color in $colors {
+      $sel : '[is="#{s-component()}"][color="#{$color}"]';
+
+      @if $color == default {
+        $sel : '[is="#{s-component()}"]';
+      }
+
+      #{$sel}:checked + .#{s-component()} {
+        background-color: s-color($color);
+      }
+    }
+  }
+}
