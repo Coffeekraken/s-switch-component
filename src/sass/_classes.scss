@@ -88,6 +88,15 @@
         $sel : '[is="#{s-component()}"]';
       }
 
+      /**
+       * @name    Switch
+       * Nice and simple #{$color} switch component
+       * @styleguide    Atoms / Switch
+       * @example    html
+       * <input is="#{s-component()}" color="#{$color}" type="checkbox" />
+       * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
+       * @see    https://github.com/coffeekraken/s-switch-component
+       */
       #{$sel}:checked + .#{s-component()} {
         background-color: s-color($color);
       }
